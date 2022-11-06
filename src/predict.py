@@ -37,6 +37,7 @@ def predict_pipeline(config_path, ts) -> None:
 def validate(val_config_path: str, ts: float):
     ts = time.time()
     os.makedirs("data/outputs/logs", exist_ok=True)
+    os.makedirs("data/outputs/predictions", exist_ok=True)
     logfile = os.path.join("data/outputs/logs", str(ts) + ".log")
     print(f"Started logging into {logfile}")
     predict_pipeline(val_config_path, ts)

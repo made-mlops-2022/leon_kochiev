@@ -71,6 +71,7 @@ def train_pipeline(config_path, ts):
 def train(train_config_path: str):
     ts = time.time()
     os.makedirs("data/outputs/logs", exist_ok=True)
+    os.makedirs("data/outputs/predictions", exist_ok=True)
     logfile = os.path.join("data/outputs/logs", str(ts) + ".log")
     logging.basicConfig(filename=logfile, level=logging.INFO)
     print(f"Started logging into {logfile}")
