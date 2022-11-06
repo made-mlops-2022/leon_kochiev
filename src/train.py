@@ -70,6 +70,7 @@ def train_pipeline(config_path, ts):
 # @hydra.main(version_base=None, config_path="/home/nullkatar/datasets/MADE/mlops/hw1/configs")
 def train(train_config_path: str):
     ts = time.time()
+    os.makedirs("data/outputs/logs", exist_ok=True)
     logfile = os.path.join("data/outputs/logs", str(ts) + ".log")
     logging.basicConfig(filename=logfile, level=logging.INFO)
     print(f"Started logging into {logfile}")
