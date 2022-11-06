@@ -1,0 +1,4 @@
+val_params:
+  metrics: f1_score   
+  normalize: True #only available for accuracy_score
+  sample_weight: 1.0
