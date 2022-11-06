@@ -13,6 +13,9 @@ from sklearn.linear_model import LogisticRegression
 
 
 class Solution:
+    """
+    Class for solver of the Heart Disease UCI problem
+    """
     def __init__(
         self,
         exclude: List,
@@ -26,7 +29,7 @@ class Solution:
     ):
         self.model = model
         preprocessing = getattr(sklearn.preprocessing, preprocessing) 
-        
+
         if self.model == "SVC":
             self.C = C
             self.kernel = kernel
@@ -49,14 +52,14 @@ class Solution:
                 preprocessing(),
                 LogisticRegression(C=C, penalty=penalty),
             )
-        
+
     def fit(self, x_train, y_train):
         self.pipeline.fit(x_train, y_train)
 
     def predict(self, x_test):
         return self.pipeline.predict(x_test)
 
-    def save_model(self, path_to_save: str, name: str = None):
+    def save(self, path_to_save: str, name: str = None):
         if name is not None:
             with open(os.path.join(path_to_save, name), "wb") as file:
                 pickle.dump(self.pipeline, file)
@@ -86,3 +89,18 @@ class Solution:
                     "wb",
                 ) as file:
                     pickle.dump(self.pipeline, file)
+
+def load_model(path_to_model: str):
+    with open(path_to_model, "rb") as file:
+        model = pickle.load(file)
+    return model
+
+def write_preds(preds, path_to_save: str, name: str = None):
+    if name is not None:
+        with open(os.path.join(path_to_save, name), "w") as file:
+            for item in preds:
+                file.write("%s\n" % item)
+    else:
+        with open(os.path.join(path_to_save, name), "w") as file:
+            for item in preds:
+                file.write("%s\n" % item)

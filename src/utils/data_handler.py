@@ -35,3 +35,10 @@ class DataHandler:
         )
 
         return X_train, X_test, y_train, y_test
+
+
+def load_preds(preds_path: str):
+    with open(preds_path) as file:
+        preds = file.readlines()
+    preds = [int(pred.strip()) for pred in preds]
+    return preds

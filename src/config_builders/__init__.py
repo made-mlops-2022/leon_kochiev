@@ -3,7 +3,8 @@ from .model_params import ModelParams, PreprParams
 from .paths import Paths
 from .sampling_params import SamplingParams
 from .validation_params import ValidationParams
-from .train_params import TrainParams
+from .compile_params import TrainParams, ValParams
+from .prediction_params import PredictionParams
 
 __all__ = [
     "DataParams",
@@ -13,4 +14,6 @@ __all__ = [
     "SamplingParams",
     "ValidationParams",
     "TrainParams",
+    "ValParams",
+    "PredictionParams"
 ]
