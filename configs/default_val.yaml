@@ -1,8 +1,0 @@
-val_params:
-  metrics: f1_score   
-  normalize: True #only available for accuracy_score
-  sample_weight: 1.0
-  target: "condition"
-  load_split_path: "data/inputs/default_splits/test_heart_cleveland_upload.csv"
-  load_preds_path: "data/outputs/predictions/predictions_1667761163.8999088.pred"
-  save_report_path: "data/models/reports/"
