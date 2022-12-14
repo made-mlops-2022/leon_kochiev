@@ -1,13 +1,13 @@
+import pandas as pd
+import requests
+import pickle
+import argparse
+
 from fastapi import FastAPI, HTTPException, status
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import PlainTextResponse
 
 from app.schemas import Input
-
-import pandas as pd
-import requests
-import pickle
-import argparse
 
 parser = argparse.ArgumentParser(
     prog="sender", description="send post request to predict listener"
