@@ -1,0 +1,5 @@
+pred_params:
+  target: "condition"
+  load_model_path: "data/models/SVC_rbf_1.0_1667761780.9964564.pkl"
+  save_preds_path: "data/outputs/predictions/"
+  load_split_path: "data/inputs/default_splits/test_heart_cleveland_upload.csv"

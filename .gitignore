@@ -130,3 +130,6 @@ dmypy.json
 
 #exclude prediction files
 *.pred
+
+#venv exclude
+mlops_hw1
