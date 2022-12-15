@@ -128,9 +128,8 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+#exclude prediction files
+*.pred
 
 #venv exclude
 mlops_hw1
-
-#exclude prediction files
-*.pred
